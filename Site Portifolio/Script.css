@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.bolhas {
+    margin-top: 20px;
+    position: absolute;
+    display: flex;
+}
+
+.bolhas span {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #ffffff42,
+                0 0 50px #ffffff,
+                0 0 100px #ffffff;
+    animation: animar calc(70s / var(--i)) linear infinite;
+    
+}
+
+#about {
+    font-size: 30px; 
+    color: white;
+    text-align: center; 
+    padding: 20px; 
+    margin: 150px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+@keyframes animar {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-5vh) scale(1);
+    }
+}
+
+.bolhas span:nth-of-type(even) {
+    background: #ffffffb7;
+}
+
+#inicial {
+    background-color: rgba(235, 235, 235, 0.911);
+    width: 100%;
+    height: 150px;
+    color: rgb(0, 0, 0);
+}
+
+#branco {
+    width: 100%;
+}
+
+#home {
+    font-size: 90px;
+    font-family: Monospace, Courier New;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    padding-left: 100px;
+    padding-top: 25px;
+}
+
+
+
+#Nome {
+    height: auto; 
+    width: 70%;
+    color: white;
+    padding-top: 100px;
+    padding-left: 0; 
+    padding-right: 0; 
+    font-size: 80px; 
+    font-family: 'Times New Roman', serif;
+    text-align: center; 
+    margin: 0 auto; 
+}
+
+
+#Desen {
+    font-size: 20px;
+    font-family: 'Times New Roman', serif;
+}
+
+#projects {
+    font-size: 50px;
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.project {
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    font-size: 16px;
+    width: 80%;
+}
+
+.project.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+}
+
+.contact1{font-size: 30px;}
+
+#linke{height: 30px;
+margin-top: 10px;
+}
+
+#contact {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 100px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+
+#project-1{color: white;
+text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    #home {
+        font-size: 40px;
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    #Nome {
+        height: auto;
+        width: 90%;
+        padding-top: 100px;
+        padding-left: 20px;
+        font-size: 50px;
+    }
+
+    #projects {
+        font-size: 80px;
+        margin: 20px 0;
+    }
+
+    .bolhas span {
+        width: 20px;
+        height: 20px;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    .project {
+        padding: 8px;
+        margin: 10px auto;
+        font-size: 14px;
+        width: 90%;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
